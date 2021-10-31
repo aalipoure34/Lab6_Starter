@@ -144,27 +144,27 @@ class RecipeCard extends HTMLElement {
       let starSrc = ""
 
       if(ratingRound == 0) {
-        starSrc = "/assets/images/icons/0-star.svg"
+        starSrc = "./assets/images/icons/0-star.svg"
       }
 
       else if(ratingRound == 1) {
-        starSrc = "/assets/images/icons/1-star.svg"
+        starSrc = "./assets/images/icons/1-star.svg"
       }
 
       else if(ratingRound == 2) {
-        starSrc = "/assets/images/icons/2-star.svg"
+        starSrc = "./assets/images/icons/2-star.svg"
       }
 
       else if(ratingRound == 3) {
-        starSrc = "/assets/images/icons/3-star.svg"
+        starSrc = "./assets/images/icons/3-star.svg"
       }
 
       else if(ratingRound == 4) {
-        starSrc = "/assets/images/icons/4-star.svg"
+        starSrc = "./assets/images/icons/4-star.svg"
       }
 
       else {
-        starSrc = "assets/images/icons/5-star.svg"
+        starSrc = "./assets/images/icons/5-star.svg"
       }
 
       const ratingImg = document.createElement("img")
