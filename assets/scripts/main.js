@@ -5,8 +5,16 @@
 const recipes = [
   'https://introweb.tech/assets/json/ghostCookies.json',
   'https://introweb.tech/assets/json/birthdayCake.json',
-  'https://introweb.tech/assets/json/chocolateChip.json'
+  'https://introweb.tech/assets/json/chocolateChip.json',
+  'assets/recipes/recipe1.json',
+  'assets/recipes/recipe2.json',
+  'assets/recipes/recipe3.json'
 ];
+
+var newRecipeArr = []
+var recipeTracker = 0
+var indexTracker = 0
+var clicked = false
 
 // Once all of the recipes that were specified above have been fetched, their
 // data will be added to this object below. You may use whatever you like for the
@@ -42,7 +50,23 @@ async function fetchRecipes() {
     // For part 2 - note that you can fetch local files as well, so store any JSON files you'd like to fetch
     // in the recipes folder and fetch them from there. You'll need to add their paths to the recipes array.
 
-    // Part 1 Expose - TODO
+    for(let i = 0; i < recipes.length; i++) {
+      fetch(recipes[i])
+        .then(response => response.json())
+        .then(data => {
+          recipeData[recipes[i]] = data
+          if((i == recipes.length - 1) && (Object.keys(recipeData).length != recipes.length)) {
+            reject(false)
+          }
+
+          else if(i == recipes.length - 1) {
+            resolve(true)
+          }
+        })
+        .catch(error => {
+          reject(false)
+        });
+    }
   });
 }
 
@@ -52,8 +76,21 @@ function createRecipeCards() {
   // files with the recipeData Object above. Make sure you only display the 
   // three recipes we give you, you'll use the bindShowMore() function to
   // show any others you've added when the user clicks on the "Show more" button.
+  
+  for(let recipe in recipeData) {
+    let newRecipe = document.createElement("recipe-card")
+    recipeTracker++
+    newRecipe.data = recipeData[recipe]
 
-  // Part 1 Expose - TODO
+    if(recipeTracker > 3) {
+      newRecipe.hidden = true
+      newRecipeArr[indexTracker++] = newRecipe
+    }
+
+    document.querySelector("main").appendChild(newRecipe)
+
+  }
+  
 }
 
 function bindShowMore() {
@@ -65,4 +102,35 @@ function bindShowMore() {
   // in the recipeData object where you stored them/
 
   // Part 2 Explore - TODO
+
+  let buttonClicker = document.querySelector("button")
+
+  buttonClicker.addEventListener("click", function() {
+
+    if(!clicked) {
+      buttonClicker.textContent = "Show less"
+      
+      for(let b = 0; b < newRecipeArr.length; b++) {
+        newRecipeArr[b].hidden = false
+      }
+      
+      clicked = true
+    }
+
+    else {
+
+      buttonClicker.textContent = "Show more"
+      
+      for(let b = 0; b < newRecipeArr.length; b++) {
+        newRecipeArr[b].hidden = true
+      }
+      
+      clicked = false
+
+    }
+
+  });
+
+
+
 }

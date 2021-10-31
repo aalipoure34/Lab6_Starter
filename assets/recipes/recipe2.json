@@ -1,0 +1,288 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.recipetineats.com/#organization",
+            "name": "RecipeTin Eats",
+            "url": "https://www.recipetineats.com/",
+            "sameAs": [
+                "https://www.facebook.com/RecipeTinEats",
+                "http://instagram.com/recipe_tin",
+                "https://www.linkedin.com/in/nagi-maehashi-9779648b",
+                "https://www.youtube.com/c/recipetineats",
+                "http://www.pinterest.com/recipetin/"
+            ],
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.recipetineats.com/#logo",
+                "inLanguage": "en-US",
+                "url": "https://www.recipetineats.com/wp-content/uploads/2019/04/RecipeTinEats_logo_for_Knowledge_Graph_card.png",
+                "contentUrl": "https://www.recipetineats.com/wp-content/uploads/2019/04/RecipeTinEats_logo_for_Knowledge_Graph_card.png",
+                "width": 2591,
+                "height": 347,
+                "caption": "RecipeTin Eats"
+            },
+            "image": {
+                "@id": "https://www.recipetineats.com/#logo"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.recipetineats.com/#website",
+            "url": "https://www.recipetineats.com/",
+            "name": "RecipeTin Eats",
+            "description": "Fast Prep, Big Flavours",
+            "publisher": {
+                "@id": "https://www.recipetineats.com/#organization"
+            },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://www.recipetineats.com/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#primaryimage",
+            "inLanguage": "en-US",
+            "url": "https://www.recipetineats.com/wp-content/uploads/2017/10/Chilli-Mac_0.jpg",
+            "contentUrl": "https://www.recipetineats.com/wp-content/uploads/2017/10/Chilli-Mac_0.jpg",
+            "width": 900,
+            "height": 1260,
+            "caption": "Chili Mac in a white cast iron pot, fresh off the stove ready to be served"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#webpage",
+            "url": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/",
+            "name": "Chili Mac and Cheese | RecipeTin Eats",
+            "isPartOf": {
+                "@id": "https://www.recipetineats.com/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#primaryimage"
+            },
+            "datePublished": "2019-10-01T14:15:07+00:00",
+            "dateModified": "2021-01-20T03:28:48+00:00",
+            "description": "Tastes like Chilli Con Carne - with the added cheesy goodness of Mac 'n Cheese! My One Pot Chili Mac and Cheese is on the table in just over 20 minutes.",
+            "breadcrumb": {
+                "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.recipetineats.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Collections",
+                    "item": "https://www.recipetineats.com/category/collections/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Quick Dinner Recipes",
+                    "item": "https://www.recipetineats.com/category/collections/dinner-tonight/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Chili Mac and Cheese"
+                }
+            ]
+        },
+        {
+            "@type": "Article",
+            "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#article",
+            "isPartOf": {
+                "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#webpage"
+            },
+            "author": {
+                "@id": "https://www.recipetineats.com/#/schema/person/1d495a057e0419b552333c8526d827a9"
+            },
+            "headline": "Chili Mac and Cheese",
+            "datePublished": "2019-10-01T14:15:07+00:00",
+            "dateModified": "2021-01-20T03:28:48+00:00",
+            "wordCount": 1245,
+            "commentCount": 328,
+            "publisher": {
+                "@id": "https://www.recipetineats.com/#organization"
+            },
+            "image": {
+                "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#primaryimage"
+            },
+            "thumbnailUrl": "https://www.recipetineats.com/wp-content/uploads/2017/10/Chilli-Mac_0.jpg",
+            "articleSection": [
+                "Beef mince recipes - ground beef",
+                "Beef Recipes",
+                "Casseroles and Cosy Bakes",
+                "Main Dishes",
+                "One Pot Recipes",
+                "Pasta Recipes",
+                "Quick and Easy",
+                "Quick Dinner Recipes"
+            ],
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": [
+                        "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#respond"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https://www.recipetineats.com/#/schema/person/1d495a057e0419b552333c8526d827a9",
+            "name": "Nagi",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https://www.recipetineats.com/#personlogo",
+                "inLanguage": "en-US",
+                "url": "https://secure.gravatar.com/avatar/400004f5258d5b43d30deed3aa6e9566?s=96&d=https%3A%2F%2Fwww.recipetineats.com%2Fwp-content%2Fthemes%2Fonce-coupled-recipe-tin-eats%2Fassets%2Fimages%2Favatar-guest-temp-cache-bust-duplicate.png&r=g",
+                "contentUrl": "https://secure.gravatar.com/avatar/400004f5258d5b43d30deed3aa6e9566?s=96&d=https%3A%2F%2Fwww.recipetineats.com%2Fwp-content%2Fthemes%2Fonce-coupled-recipe-tin-eats%2Fassets%2Fimages%2Favatar-guest-temp-cache-bust-duplicate.png&r=g",
+                "caption": "Nagi"
+            },
+            "description": "I believe you can make great food with everyday ingredients even if you\u2019re short on time and cost conscious. You just need to cook clever and get creative!",
+            "sameAs": [
+                "http:////www.recipetineats.com/about-me/"
+            ]
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "Recipe",
+            "name": "One Pot Chili Mac and Cheese",
+            "author": {
+                "@type": "Person",
+                "name": "Nagi"
+            },
+            "description": "Recipe video above. A homemade Chili with the addition of macaroni and cheese = Chili Mac \u2018n Cheese! This is terrifically moorish and a fabulous one pot meal. Super quick too! The key with this recipe is to turn the stove off as soon as the pasta is just cooked - it will keep cooking in the residual heat.&nbsp;",
+            "datePublished": "2019-10-02T00:15:07+00:00",
+            "image": [
+                "https://www.recipetineats.com/wp-content/uploads/2017/10/Chilli-Mac_0.jpg",
+                "https://www.recipetineats.com/wp-content/uploads/2017/10/Chilli-Mac_0.jpg?w=500&h=500&crop=1",
+                "https://www.recipetineats.com/wp-content/uploads/2017/10/Chilli-Mac_0.jpg?w=500&h=375&crop=1",
+                "https://www.recipetineats.com/wp-content/uploads/2017/10/Chilli-Mac_0.jpg?w=480&h=270&crop=1"
+            ],
+            "recipeYield": [
+                "5",
+                "5 - 6"
+            ],
+            "prepTime": "PT10M",
+            "cookTime": "PT15M",
+            "totalTime": "PT25M",
+            "recipeIngredient": [
+                "1 tbsp olive oil",
+                "2  garlic cloves (, minced)",
+                "1  onion (, finely chopped)",
+                "1  red capsicum / bell pepper (, chopped)",
+                "500g / 1 lb   ground beef (mince) (, I use lean)",
+                "800g / 28 oz  crushed canned tomato",
+                "420g / 14 oz  can red kidney beans (, drained)",
+                "2 1/2 cups (625 ml)  beef broth ((chicken broth also ok))",
+                "250g / 8 oz  elbow macaroni pasta ((elbow pasta), uncooked)",
+                "2 cups (200g)  shredded cheese ((cheddar, Monterey Jack, tasty cheese))",
+                "1/4 cup coriander / cilantro ( finely chopped, for garnish)",
+                "1 tsp cayenne pepper ( or pure chilli powder (adjust spiciness to taste) (Note 1))",
+                "2 tsp paprika powder",
+                "2 tsp cumin powder",
+                "1 1/2 tsp onion powder ((can sub garlic powder))",
+                "1 tsp dried oregano",
+                "1/2 tsp black pepper",
+                "1 1/4 tsp salt"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Heat oil in large pot over high heat. Add garlic and onion, cook for 1 minute. Then add capsicum and cook until onion is translucent.",
+                    "name": "Heat oil in large pot over high heat. Add garlic and onion, cook for 1 minute. Then add capsicum and cook until onion is translucent.",
+                    "url": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#wprm-recipe-23370-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Add beef and cook, breaking it up as you go.",
+                    "name": "Add beef and cook, breaking it up as you go.",
+                    "url": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#wprm-recipe-23370-step-0-1"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Once the beef turns from red to brown, add remaining ingredients except cheese. Stir, bring to simmer, then turn the heat down to medium.",
+                    "name": "Once the beef turns from red to brown, add remaining ingredients except cheese. Stir, bring to simmer, then turn the heat down to medium.",
+                    "url": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#wprm-recipe-23370-step-0-2"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Cover and cook for 12 minutes or until the macaroni is al dente, meaning just cooked, still a tiny bit on the firm side. It should be saucy but not tons of liquid (see video).",
+                    "name": "Cover and cook for 12 minutes or until the macaroni is al dente, meaning just cooked, still a tiny bit on the firm side. It should be saucy but not tons of liquid (see video).",
+                    "url": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#wprm-recipe-23370-step-0-3"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Turn the stove OFF but leave the pot on the stove. Stir through half the cheese \u2013 it should be a bit saucy. Adjust salt and pepper to taste. Top with remaining cheese, put the lid back on and leave until the cheese melts - about 2 minutes (sauce will absorb further during this period).",
+                    "name": "Turn the stove OFF but leave the pot on the stove. Stir through half the cheese \u2013 it should be a bit saucy. Adjust salt and pepper to taste. Top with remaining cheese, put the lid back on and leave until the cheese melts - about 2 minutes (sauce will absorb further during this period).",
+                    "url": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#wprm-recipe-23370-step-0-4"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Sprinkle with coriander, if desired, and serve immediately.",
+                    "name": "Sprinkle with coriander, if desired, and serve immediately.",
+                    "url": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#wprm-recipe-23370-step-0-5"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.98",
+                "ratingCount": "125"
+            },
+            "recipeCategory": [
+                "Main"
+            ],
+            "recipeCuisine": [
+                "American"
+            ],
+            "keywords": "Chili Mac",
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "servingSize": "524 g",
+                "calories": "768 kcal",
+                "carbohydrateContent": "75 g",
+                "proteinContent": "44 g",
+                "fatContent": "35 g",
+                "saturatedFatContent": "14 g",
+                "cholesterolContent": "103 mg",
+                "sodiumContent": "1630 mg",
+                "fiberContent": "11 g",
+                "sugarContent": "12 g"
+            },
+            "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#recipe",
+            "isPartOf": {
+                "@id": "https://www.recipetineats.com/one-pot-chili-mac-and-cheese/#article"
+            },
+            "mainEntityOfPage": "random junk" }
+    ]
+}

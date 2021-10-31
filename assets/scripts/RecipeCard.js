@@ -1,8 +1,7 @@
 class RecipeCard extends HTMLElement {
   constructor() {
-    // Part 1 Expose - TODO
-
-    // You'll want to attach the shadow DOM here
+    super()
+    this.attachShadow({mode: 'open'})
   }
 
   set data(data) {
@@ -92,7 +91,7 @@ class RecipeCard extends HTMLElement {
     //    document.createElement()
     //    document.querySelector()
     //    element.classList.add()
-    //    element.setAttribute()
+    //    element.setAttribute()  
     //    element.appendChild()
     //    & All of the helper functions below
 
@@ -100,6 +99,104 @@ class RecipeCard extends HTMLElement {
     // created in the constructor()
 
     // Part 1 Expose - TODO
+    this.shadowRoot.append(styleElem)
+    this.shadowRoot.append(card)
+
+    const image = document.createElement("img")
+    let imageSrc = searchForKey(data, "thumbnailUrl")
+    image.setAttribute('src', imageSrc)
+
+    let headline = searchForKey(data, "headline")
+    image.setAttribute('alt', headline)
+    
+    
+    card.append(image)
+
+    const p1 = document.createElement("p")
+    p1.setAttribute("class", "title")
+    let a1 = document.createElement("a")
+    a1.setAttribute("href", headline)
+    a1.textContent = headline
+    p1.append(a1)
+    card.append(p1)
+
+    const p2 = document.createElement("p")
+    p2.setAttribute("class", "organization")
+    p2.textContent = getOrganization(data)
+    card.append(p2)
+
+    const reviewDiv = document.createElement("div")
+    reviewDiv.setAttribute("class", "rating")
+
+    let averageRating = searchForKey(data, "ratingValue")
+
+    if(averageRating == undefined) {
+      const span1 = document.createElement("span")
+      span1.textContent = "No Reviews"
+      reviewDiv.append(span1)
+    }
+
+    else {
+      const span1 = document.createElement("span")
+      span1.textContent = averageRating
+      let ratingRound = Math.round(averageRating)
+
+      let starSrc = ""
+
+      if(ratingRound == 0) {
+        starSrc = "assets/images/icons/0-star.svg"
+      }
+
+      else if(ratingRound == 1) {
+        starSrc = "assets/images/icons/1-star.svg"
+      }
+
+      else if(ratingRound == 2) {
+        starSrc = "assets/images/icons/2-star.svg"
+      }
+
+      else if(ratingRound == 3) {
+        starSrc = "assets/images/icons/3-star.svg"
+      }
+
+      else if(ratingRound == 4) {
+        starSrc = "assets/images/icons/4-star.svg"
+      }
+
+      else {
+        starSrc = "assets/images/icons/5-star.svg"
+      }
+
+      const ratingImg = document.createElement("img")
+      ratingImg.setAttribute("src", starSrc)
+      ratingImg.setAttribute("alt", ratingRound + " stars")
+
+      const span2 = document.createElement("span")
+      span2.textContent = "(" + searchForKey(data, "ratingCount") + ")"
+      console.log(searchForKey(data, "ratingCount"))
+      reviewDiv.append(span1)
+      reviewDiv.append(ratingImg)
+      reviewDiv.append(span2)
+
+    }
+    card.append(reviewDiv)
+
+    const timer = document.createElement("time")
+
+    let intermediateTime = searchForKey(data, "totalTime")
+
+    timer.textContent = convertTime(intermediateTime)
+
+    card.append(timer)
+
+    const p3 = document.createElement("p")
+    p3.setAttribute("class", "ingredients")
+
+    let intermediateIngredient = searchForKey(data, "recipeIngredient")
+    p3.textContent = createIngredientList(intermediateIngredient)
+    card.append(p3)
+
+
   }
 }
 
