@@ -115,7 +115,7 @@ class RecipeCard extends HTMLElement {
     const p1 = document.createElement("p")
     p1.setAttribute("class", "title")
     let a1 = document.createElement("a")
-    a1.setAttribute("href", headline)
+    a1.setAttribute("href", getUrl(data))
     a1.textContent = headline
     p1.append(a1)
     card.append(p1)
