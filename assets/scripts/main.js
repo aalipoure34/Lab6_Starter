@@ -6,9 +6,9 @@ const recipes = [
   'https://introweb.tech/assets/json/ghostCookies.json',
   'https://introweb.tech/assets/json/birthdayCake.json',
   'https://introweb.tech/assets/json/chocolateChip.json',
-  'assets/recipes/recipe1.json',
-  'assets/recipes/recipe2.json',
-  'assets/recipes/recipe3.json'
+  '/assets/recipes/recipe1.json',
+  '/assets/recipes/recipe2.json',
+  '/assets/recipes/recipe3.json'
 ];
 
 var newRecipeArr = []
