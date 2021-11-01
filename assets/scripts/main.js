@@ -56,15 +56,16 @@ async function fetchRecipes() {
         .then(data => {
           recipeData[recipes[i]] = data
           setTimeout(() => {
-          if((i == recipes.length - 1) && (Object.keys(recipeData).length != recipes.length)) {
-            reject(false)
-          }
+            if((i == recipes.length - 1) && (Object.keys(recipeData).length != recipes.length)) {
+              reject(false)
+            }
 
-          else if(i == recipes.length - 1) {
-            resolve(true)
-          }
+            else if(i == recipes.length - 1) {
+              resolve(true)
+            }
           }, 500);
         })
+        
         .catch(error => {
           reject(false)
         });
