@@ -80,12 +80,12 @@ function createRecipeCards() {
   // three recipes we give you, you'll use the bindShowMore() function to
   // show any others you've added when the user clicks on the "Show more" button.
   
-  for(let recipe in recipeData) {
-    let newRecipe = document.createElement("recipe-card")
-    recipeTracker++
-    newRecipe.data = recipeData[recipe]
+  for(let b = 0; b < recipes.length; b++) {
 
-    if(recipeTracker > 3) {
+    let newRecipe = document.createElement("recipe-card")
+    newRecipe.data = recipeData[recipes[b]]
+
+    if(b > 2) {
       newRecipe.hidden = true
       newRecipeArr[indexTracker++] = newRecipe
     }
